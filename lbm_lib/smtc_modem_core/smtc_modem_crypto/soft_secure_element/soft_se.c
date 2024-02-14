@@ -487,7 +487,7 @@ smtc_se_return_code_t smtc_secure_element_aes_encrypt( const uint8_t* buffer, ui
 
         while( size != 0 )
         {
-            aes_encrypt( &buffer[block], &enc_buffer[block], &aes_ctx );
+            lora_aes_encrypt( &buffer[block], &enc_buffer[block], &aes_ctx );
             block = block + 16;
             size  = size - 16;
         }
